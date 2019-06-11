@@ -301,3 +301,67 @@ $sub-color: #fff;
     	border-bottom: 1px solid #c8c8c8;
 	}
 }
+// Follow
+.follow-title{
+	font: {
+		size: 20xp;
+		weight: 700;
+	};
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin: 20px 0 24px;
+}
+.follow-main{
+	padding: 25px 0;
+	background: #f8f8f8;
+	.register-mail{
+		form{
+			width: 100%;
+			margin-bottom: 10px;
+			input[type=text]{
+				font-size: 14px;
+				width: 390px;
+				padding: 12px 20px; 
+				border: 1px solid #c8c8c8;
+				color: #bdbdbd;
+				outline: 0;
+				margin-right: 8px;
+			}
+			button[type=submit]{
+				@include button-style;
+				font: {
+					size: 14px;
+					weight: 700;
+					family: roboto-regular; 
+				};
+				text-transform: uppercase;
+				padding: 13px 25px;
+			}
+		}
+	}
+	.social-follow{
+		ul{
+			display: flex;
+			justify-content: center;
+			margin-bottom: 0;
+			li{
+				margin-right: 10px;
+				a{
+					@include button-style;
+					height: 48px;
+					width: 48px;
+					display: block;
+					line-height: 48px;
+					text-align: center;
+					border-radius: 50%;
+					transition: 0.3s ease;
+					&:hover{
+						color: $primary-color;
+						background: $sub-color;
+					}
+				}
+			}
+		}
+	}
+}

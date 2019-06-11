@@ -282,4 +282,71 @@ a, a:hover, a:active, a:visited, a:focus {
   border-bottom: 1px solid #c8c8c8;
 }
 
+.follow-title {
+  font-size: 20xp;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 20px 0 24px;
+}
+
+.follow-main {
+  padding: 25px 0;
+  background: #f8f8f8;
+}
+.follow-main .register-mail form {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.follow-main .register-mail form input[type=text] {
+  font-size: 14px;
+  width: 390px;
+  padding: 12px 20px;
+  border: 1px solid #c8c8c8;
+  color: #bdbdbd;
+  outline: 0;
+  margin-right: 8px;
+}
+.follow-main .register-mail form button[type=submit] {
+  color: #fff;
+  background-color: #232323;
+  font-size: 14px;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: roboto-regular;
+  text-transform: uppercase;
+  padding: 13px 25px;
+}
+.follow-main .social-follow ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+.follow-main .social-follow ul li {
+  margin-right: 10px;
+}
+.follow-main .social-follow ul li a {
+  color: #fff;
+  background-color: #232323;
+  font-size: 14px;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  height: 48px;
+  width: 48px;
+  display: block;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+.follow-main .social-follow ul li a:hover {
+  color: #232323;
+  background: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */
