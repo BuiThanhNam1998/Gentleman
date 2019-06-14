@@ -2,16 +2,17 @@
 	font-family: roboto-regular;
 	src: url('../fonts/Roboto-Regular.ttf');
 }
-body{
-	font-size: 14px;
-	overflow-x: hidden;
-}
 a, a:hover, a:active, a:visited, a:focus {
     text-decoration:none;
 }
 $primary-color: #232323;
 $sub-color: #fff;
 $primary-font: roboto-regular;
+body{
+	font-size: 14px;
+	overflow-x: hidden;
+	font-family: $primary-font;
+}
 @mixin transition-style{
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
@@ -211,7 +212,7 @@ header{
 			height: 0;
 			margin-top: 0;
 			.nav-icon{
-				line-height: 36px;
+				line-height: 40px;
 				text-align: center;
 				display: block;
 				width: 45px;
@@ -304,20 +305,103 @@ header{
     	border-bottom: 1px solid #c8c8c8;
 	}
 }
-// Follow
-.follow-title{
-	font: {
-		size: 20px;
-		weight: 700;
-	};
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
-	margin: 20px 0 24px;
+// Banner 2
+.banner-sub{
+	margin-bottom: 30px;
+	.sub-banner-item{
+		position: relative;
+		margin-bottom: 15px;
+		a{
+			img{
+				@include fix-image;
+			}
+		}
+		.sub-banner-content{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);  
+			width: 400px;
+			text-align: center; 
+			h4{
+				font: {
+					size: 40px;
+					weight: 700;
+					family: $primary-font;
+				}
+				color: $sub-color;
+				text-transform: uppercase;
+				position: relative;
+				padding-bottom: 17px;
+				margin-bottom: 17px;
+				&:before{
+					content: "";
+					width: 32px;
+					height: 2px;
+					background-color: $sub-color;
+					position: absolute;
+					left: 50%;
+					bottom: 0;
+					transform: translateX(-50%);
+				}
+			}
+			p{
+				font-style: italic;
+				font-size: 12px;
+				color: $sub-color;
+				padding-bottom: 20px;
+			}
+			a{
+				@include button-style;
+				@include transition-style;
+				background-color: $sub-color;
+				color: $primary-color;
+				height: 42px;
+				padding: 0 30px;
+				display: inline-block;
+				height: 42px;
+				line-height: 42px;
+				font-weight: 700;
+				text-transform: uppercase;
+				font-size: 12px;
+				letter-spacing: 0.05em;
+				&:hover{
+					background: #090939;
+    				color: #fff;
+				}
+			} 
+		}
+	}
+	.about-us{
+		text-align: center;
+		h2{
+			font-size: 17px;
+			color: $primary-color;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			margin: 17px 0;
+		}
+		p{
+			font-size: 12px;
+			color: #484848;
+			line-height: 1.7;
+		}
+	}
 }
+// Follow
 .follow-main{
 	padding: 25px 0;
 	background: #f8f8f8;
+	.follow-title{
+		font: {
+			size: 20px;
+			weight: 700;
+		};
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		margin: 20px 0 24px;
+	}
 	.register-mail{
 		form{
 			width: 100%;
